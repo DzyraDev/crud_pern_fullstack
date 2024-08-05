@@ -6,7 +6,12 @@ const itemRoutes = require("./routes/itemRoutes");
 
 const app = express();
 
-app.use(cors());
+const corsOptions = {
+  origin: ["http://localhost:3000", "https://crud-pern-client.vercel.app"],
+  optionsSuccessStatus: 200,
+};
+
+app.use(cors(corsOptions));
 app.use(bodyParser.json());
 
 app.use("/api", itemRoutes);
