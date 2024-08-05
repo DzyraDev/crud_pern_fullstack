@@ -1,10 +1,10 @@
 const { Sequelize } = require('sequelize');
 
 
-const sequilize = new Sequelize('postgresql://postgres:dBazZKWSqhAXvfxnPNKwprzjhCwCTAxT@monorail.proxy.rlwy.net:10362/railway', {
-  host: "localhost",
-  dialect: "postgres",
-});
+const sequilize = new Sequelize(
+  "postgres://default:AfqaHL5zQ4iS@ep-fragrant-unit-a4gqplt4-pooler.us-east-1.aws.neon.tech:5432/verceldb?sslmode=require?sslmode=require",
+ 
+);
 
 
 module.exports = sequilize
