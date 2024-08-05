@@ -13,9 +13,15 @@ function ItemForm({ item }) {
     const itemData = { nama, description, harga };
 
     if (item) {
-      await axios.patch(`http://localhost:5000/api/items/${item.id}`, itemData);
+      await axios.patch(
+        `https://crud-pern-server.vercel.app/api/items/${item.id}`,
+        itemData
+      );
     } else {
-      await axios.post("http://localhost:5000/api/items", itemData);
+      await axios.post(
+        "https://crud-pern-server.vercel.app/api/items",
+        itemData
+      );
     }
 
     navigate("/");

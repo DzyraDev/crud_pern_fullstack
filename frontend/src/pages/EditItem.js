@@ -9,7 +9,9 @@ function EditItem() {
 
   useEffect(() => {
     const fetchItem = async () => {
-      const response = await axios.get(`http://localhost:5000/api/items/${id}`);
+      const response = await axios.get(
+        `https://crud-pern-client.vercel.app/api/items/${id}`
+      );
       setItem(response.data);
     };
 

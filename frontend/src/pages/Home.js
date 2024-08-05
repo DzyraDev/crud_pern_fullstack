@@ -12,12 +12,14 @@ function Home() {
   }, []);
 
   const fetchItems = async () => {
-    const response = await axios.get("http://localhost:5000/api/items");
+    const response = await axios.get(
+      "https://crud-pern-client.vercel.app/api/items"
+    );
     setItems(response.data);
   };
 
   const deleteItem = async (id) => {
-    await axios.delete(`http://localhost:5000/api/items/${id}`);
+    await axios.delete(`https://crud-pern-client.vercel.app/api/items/${id}`);
     fetchItems();
   };
 
