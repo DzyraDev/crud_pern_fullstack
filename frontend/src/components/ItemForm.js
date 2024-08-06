@@ -14,12 +14,12 @@ function ItemForm({ item }) {
 
     if (item) {
       await axios.patch(
-        `https://crud-pern-server.vercel.app/api/items/${item.id}`,
+        `http://localhost:5000/api/items/${item.id}`,
         itemData
       );
     } else {
       await axios.post(
-        "https://crud-pern-server.vercel.app/api/items",
+        "http://localhost:5000/api/items",
         itemData
       );
     }
